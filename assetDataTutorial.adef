@@ -1,0 +1,23 @@
+sandboxed: false
+executables:
+{
+    assetDataTutorial = ( componentAssetData )
+}
+processes:
+{
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
+    run:
+    {
+        (assetDataTutorial)
+    }
+}
+bindings:
+{
+    assetDataTutorial.componentAssetData.le_avdata -> avcService.le_avdata
+    assetDataTutorial.componentAssetData.le_avc -> avcService.le_avc
+}
+start: manual
+version: 1.2
