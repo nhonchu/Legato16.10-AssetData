@@ -1,0 +1,34 @@
+requires:
+{
+    api:
+    {
+        le_avdata.api
+        le_avc.api
+    }
+}
+sources:
+{
+    assetDataMain.c
+}
+assets:
+{
+    Room = 
+    {
+        variables:
+        {
+            string  Name
+            float   Temperature
+            bool    IsAC_on
+        }
+
+        settings:
+        {
+            int     TargetTemperature
+        }
+
+        commands:
+        {
+            TurnOffAC
+        }
+    }
+}
